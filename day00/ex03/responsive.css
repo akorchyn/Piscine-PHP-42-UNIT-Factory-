@@ -1,0 +1,33 @@
+.box
+{
+    height: 100px;
+    width:5%;
+    height: 5%;
+}
+
+#img_mem
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:200px;
+    width:200px;
+}
+
+.el_name
+{
+    font-size:0.9vw;
+}
+
+.number
+{
+    margin-top: 0px;
+    text-align: right;
+    font-size: 0.6vw;
+}
+.weight
+{
+    margin-top: 0px;
+    text-align: left;
+    font-size: 0.6vw;
+}
