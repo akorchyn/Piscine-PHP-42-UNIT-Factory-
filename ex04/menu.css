@@ -1,0 +1,61 @@
+.top {
+    font-size: 18px;
+    width: 800px;
+    margin: 0 auto 0;
+    background: hotpink;
+    border-radius: 25px;
+}
+
+.top ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top ul li {    
+    display: inline-block;
+    position: relative;
+}
+
+.top ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10 20;
+    display: block;
+}
+
+.top ul li a:hover {
+    border-radius: 25px;
+    background-color: black;
+}
+
+.top ul li ul li a:hover
+{
+    border-radius: 25px;
+    background-color: hotpink;
+}
+
+.drop {
+    border-radius: 10px;
+    position: absolute;
+    background-color: black;
+}
+
+ul.drop {
+    display: none;
+}
+
+.top ul li:hover ul.drop {
+    display: block;
+}
+
+body
+{
+    font-family: monospace;
+}
+
+#text
+{
+    color: yellowgreen;
+    text-align: center;
+}
