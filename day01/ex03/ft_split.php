@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 function    get_word($str, $i)
 {
