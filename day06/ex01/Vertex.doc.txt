@@ -1,0 +1,15 @@
+
+<- Vertex ----------------------------------------------------------------------
+The class vector handle vectors;
+
+An instance can be contructed from array with W and Color or without
+new Color( array('x' => 1, 'y' => 2, 'z' => 3, 'w' => 2.2, 'color' => Color(...)) );
+
+if 'color' or 'w' doesnt set it will replaced by white and 1.0
+
+get_x, get_y, get_z, get_w, get_color return you value of object variable
+
+set_x($value), set_y($value), set_z($value), set_w($value), set_color(Color $value) change variable to $value;
+
+static variable $verbose give you opportunity to debug
+---------------------------------------------------------------------- Vertex ->

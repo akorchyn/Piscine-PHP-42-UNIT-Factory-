@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>EX01</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$("document").ready(function () {
+			setInterval(useMe, 30 * 1000);
+			function useMe() {
+				alert("Please, use me...");
+			}
+			$("#doIt").click(doIt);
+
+			function doIt(){
+				var sign = $("#select option:selected").val();
+				var first = $("#first").val();
+				var second = $("#second").val();
+				if (isNaN(first) || isNaN(second) || first < 0 || second < 0 || first.trim() == "" || second.trim() == "") {
+					alert("Error :(");
+					return ;
+				}
+				first = parseInt(first);
+				second = parseInt(second);
+				if ((sign == '%' || sign == '/') && !second)
+				{
+					alert("It's over 9000!");
+					console.log("It's over 9000!");
+					return ;
+				}
+				switch(sign) {
+					case '+':
+						alert(first + second);
+						console.log(first + second);
+						break ;
+					case '-':
+						alert(first - second);
+						console.log(first - second);
+						break ;
+					case '*':
+						alert(first * second);
+						console.log(first * second);
+						break ;
+					case '/':
+						alert(first / second);
+						console.log(first / second);
+						break ;
+					case '%':
+						alert(first % second);
+						console.log(first % second);
+						break ;				
+				}
+			}
+		});
+	</script>
+	<form id="form">
+		<input type="text" id="first">
+		<select id = "select">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="second">
+		<input type="button" id="doIt" value="Try me!"">
+	</form>
+</body>
+</html>

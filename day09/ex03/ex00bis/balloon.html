@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<style>
+			#ballon {
+				position: absolute;
+  				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%;
+			}
+		</style>
+		<title>Ex00</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<script>
+			$("document").ready(function(){
+				var width = 200;
+				$("#ballon").click(function() {
+					width += 10;
+					if (width > 420) {
+						$("#ballon").css("width", '200px');
+						$("#ballon").css("height", '200px');
+						width = 200;
+					}
+					else {
+						$("#ballon").css("width", width);
+						$("#ballon").css("height", width);
+					}
+					if ($("#ballon").css("background-color") == 'rgb(255, 0, 0)')
+						$("#ballon").css("background-color", 'green');
+					else if ($("#ballon").css("background-color") == 'rgb(0, 0, 255)')
+						$("#ballon").css("background-color", 'red');
+					else
+						$("#ballon").css("background-color", 'blue');
+				});
+				$("#ballon").mouseout(function(){
+					if (width > 200) {
+						width -= 5;
+						$("#ballon").css("width", width);
+						$("#ballon").css('height', width);
+					}
+					if ($("#ballon").css("background-color") == 'rgb(255, 0, 0)')
+						$("#ballon").css("background-color", 'blue');
+					else if ($("#ballon").css("background-color") == 'rgb(0, 0, 255)')
+						$("#ballon").css("background-color", 'green');
+					else
+						$("#ballon").css("background-color", 'red');
+				})
+			});
+		</script>
+		<div id="ballon">
+		</div>
+	</body>
+</html>

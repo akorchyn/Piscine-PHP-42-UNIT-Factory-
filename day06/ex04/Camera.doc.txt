@@ -1,0 +1,25 @@
+
+<- Camera ----------------------------------------------------------------------
+EXAMPLE INPUT
+$vtxO = new Vertex( array( 'x' => 20.0, 'y' => 20.0, 'z' => 80.0 ) );
+$R    = new Matrix( array( 'preset' => Matrix::RY, 'angle' => M_PI ) );
+$cam  = new Camera( array( 'origin' => $vtxO,
+						   'orientation' => $R,
+						   'width' => 640,
+						   'height' => 480,
+						   'fov' => 60,
+						   'near' => 1.0,
+						   'far' => 100.0) );
+
+The Class’ constructor is waiting for an array. The following keys are required: ’origin’: The vertex positioning the camera in the world mark. Thanks to this
+vertex, we can compute a vector and then a translation matrix.
+’orientation’: Rotation matrix orienting the camera in the world mark.
+’width’: Width in pixel of the desired image. Is used to compute the ratio. Not compatible with the ’ratio’ key.
+’height’: Height in pixel of the desired image. Is used to compute the ratio. Not compatible with the ’ratio’ key.
+’ratio’: Image’s ratio. Not compatible with the ’width’ and ’height’ keys. ’fov’ : The projected image’s field of view in in degree.
+’near’ : The near clipping plane.
+’far’ : The far clipping plane.
+
+Matrix::$verbose = true to DEBUG MODE
+
+---------------------------------------------------------------------- Camera ->

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>EX00</title>
+		<style>
+			#ballon {
+				position: absolute;
+  				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+
+			window.onload = function(){
+				var ballon = document.getElementById("ballon");
+				ballon.addEventListener("click", handler);
+				ballon.addEventListener("mouseout", smaller);
+			}
+			function handler()
+			{
+				var width = parseInt(ballon.style.width) + 10;
+				if (width > 420) {
+					ballon.style.width = '200px';
+					ballon.style.height = '200px';
+				}
+				else {
+					ballon.style.width = width + 'px';
+					ballon.style.height = width + 'px';
+				}
+				if (ballon.style.background == 'red')
+					ballon.style.background = 'green';
+				else if (ballon.style.background == 'green')
+					ballon.style.background = 'blue';
+				else
+					ballon.style.background = 'red';
+			}
+			function smaller() {
+				var width = parseInt(ballon.style.width);
+				if (width > 200) {
+					width -= 5;
+				}
+				
+				ballon.style.width = width + 'px';
+				ballon.style.height = width + 'px';
+				if (ballon.style.background == 'red')
+					ballon.style.background = 'blue';
+				else if (ballon.style.background == 'green')
+					ballon.style.background = 'red';
+				else
+					ballon.style.background = 'green';
+			}
+		</script>
+		<div id="ballon" style="width: 200px; height: 200px; background: red;">
+		</div>
+	</body>

@@ -1,0 +1,28 @@
+
+<- Matrix ----------------------------------------------------------------------
+To create matrix you have to:
+    select one of the preset: IDENTITY, SCALE, RX, RY, RZ, TRANSLATION or PROJECTION.
+
+new Matrix(array('preset' => PresetName, [other attributes for presets])
+
+IDENTITY WITHOUT ADDITIONAL ATTRIBUTES
+
+SCALE has attribute 'scale' => $value in $value set number to scale matrix identity
+
+RX, RY, RZ has attribute 'angle' with needed angle in rads
+
+TRANSLATION has attribute 'vtc' class Vector
+
+PROJECTION has attributes 'fov', 'ratio', 'near', 'far'
+
+DIAGONAL has attribute 'matrix' do DIAGONAL symetry new Matrix('preset' => Matrix::DIAGONAL, 'matrix' => Matrix(...))
+
+EXAMPLE : new Matrix(array('preset' => Matrix::PROJECTION, 'fov' => value, 'ratio' => ...)
+
+MATRIX::$verbose = true - turn on DEBUG mode
+
+METHODS:
+    Matrix mult( Matrix $rhs ) - multiple current matrix to another and return new Matrix (does not changed current)
+    Vertex transformVertex - returns a new vertex resulting from the transformation of the vertex by the matrix.
+
+---------------------------------------------------------------------- Matrix ->

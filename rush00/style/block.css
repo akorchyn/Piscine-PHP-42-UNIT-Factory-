@@ -1,0 +1,13 @@
+.uli {
+    font: 14px Verdana, Geneva, sans-serif;
+    text-align: center;
+}
+.ulili {
+    display : inline-block;
+    width : 15%;
+    height: 15%;
+    margin: 0px 0 20px;
+    vertical-align: top;
+    background: aqua;
+    text-align: center;
+}

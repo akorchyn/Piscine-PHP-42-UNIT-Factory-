@@ -1,0 +1,12 @@
+
+<- Vector ----------------------------------------------------------------------
+To use this class
+    new Vector(array('dest' => Vertex1, ['orig' => Vertex2])) if Vertex2 not it would be x = 0, y = 0, z = 0, w = 1
+
+    Magnitude tot get length
+    Normalize tot get vector with length 1
+    add, sub, dotProduct to + - * cordinates one to another
+    opposite to changed vector way
+    cos to get cos between vectors
+    get_x, get_y, get_z, get_w to get variables
+---------------------------------------------------------------------- Vector ->

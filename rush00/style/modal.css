@@ -1,0 +1,68 @@
+#modalWindow1 {
+     position: absolute;
+     background: azure;
+     width: 100%;
+     height: 100%;
+     display: none;
+     pointer-events: none;
+ }
+
+#modalWindow1:target {
+    pointer-events: auto;
+    display: block;
+}
+.window1 {
+    width: 400px;
+    height: 200px;
+    background: azure;
+    margin: 35%;
+}
+#modalWindow2 {
+    position: absolute;
+    background: azure;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+}
+
+#modalWindow2:target {
+    pointer-events: auto;
+    display: block;
+}
+.window2 {
+    width: 400px;
+    height: 250px;
+    background: azure;
+    margin: 35%;
+}
+
+.closed {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+#modalWindow3 {
+    position: absolute;
+    background: azure;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+}
+
+#modalWindow3:target {
+    pointer-events: auto;
+    display: block;
+}
+.window3 {
+    width: 400px;
+    height: 250px;
+    background: azure;
+    margin: 25%;
+}
